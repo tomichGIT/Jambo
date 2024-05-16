@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-main: #1A1A1A;
+    --txt-secondary: #989898;
+    --bg-color: #F4F3E1;
+    font-size: 24px;
+}
+
+@font-face {
+    font-family: 'Hatton-Regular';
+    src: url("../fonts/PP-Hatton-Medium-500.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url("../fonts/Helvetica.ttf") format('truetype');
+}
+
+body {
+    font-family: 'Hatton-Regular', 'Helvetica', sans-serif;
+    color: var(--txt-main);
+    background-color: var(--bg-color);
+    
+
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main {
+    flex-grow:1;
+}
+
+.u-txtMain {
+    color: var(--txt-main);
+}
+.u-txtSecondary {
+    color: var(--txt-secondary);
+}
+
+.Links {
+    width: 100%;
+    border-top: #1A1A1A 1px solid;
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    font-family: Helvetica;
+    list-style: none;
+}
+
+.Links-li {
+    
+}
+
+.Links-a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--txt-main);
+    text-transform: uppercase;
+}	
+
+.section {
+    padding: 1rem;
+}
+.footer {
+    padding: 1rem;
+    /* max-height: 2rem; */
+}
+.DesktopHeader {
+    display:block;
+    padding: 3rem 2rem;
+    /* background-image: url("../imgs/packaging-e1-2.jpg"); */
+    /* background-size: cover;
+    background-position: center; */
+}
+.MobileHeader {
+    padding: 2rem;
+    display: none;
+}
+
+.bgImages {
+    transition: background 1s ease-in-out;
+    background-size: cover;
+    /* background-position: center; */
+    background-position:  50% calc(50% + 150px);
+    background-repeat: no-repeat;
+}
+
+/* Media queries for mobile */
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 24px;
+    }
+    body {
+        /* background-image: url("../imgs/packaging-e1-2.jpg"); */
+        /* background-size: cover;
+        background-position: center; */
+    }
+    .Links {
+        /* padding: 1rem; */
+        flex-direction: column;
+        justify-content: center;
+        border-top: none;
+    }
+    .Links-a {
+        /* font-size: 0.8rem; */
+        color:white;
+        font-size: 2.5rem;
+    }
+    .DesktopHeader {
+        /* padding: 1rem; */
+        display:none;
+    }
+    .MobileHeader {
+        display: block;
+    }
+    .section {
+        /* padding: 0.5rem; */
+        color:white;
+    }
+    .footer {
+        padding: 0rem;
+    }
+    .main {
+    }
+
+    .bgImages {
+    background-position:  center;
+    }
+}
