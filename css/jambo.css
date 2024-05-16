@@ -135,5 +135,6 @@ body {
 
     .bgImages {
     background-position:  center;
+        background-attachment: fixed;
     }
 }
